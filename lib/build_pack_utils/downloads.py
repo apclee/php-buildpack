@@ -23,6 +23,7 @@ class Downloader(object):
         if handlers:
             openers.append(urllib2.ProxyHandler(handlers))
             for handler in handlers.values():
+                print handler
                 if '@' in handler:
                     openers.append(urllib2.ProxyBasicAuthHandler())
             opener = urllib2.build_opener(*openers)
