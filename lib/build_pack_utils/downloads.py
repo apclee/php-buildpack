@@ -42,7 +42,8 @@ class Downloader(object):
     def download_direct(self, url):
         print 'Donwloading package...'
         headers = {'User-agent' : 'Mozilla/5.0'}
-        buf = urllib2.Request(url, None, headers).read()
+        req = urllib2.Request(url, None, headers)
+        buf = urllib2.urlopen(req).read()
         self._log.info('Downloaded [%s] to memory', url)
         self._log.debug("Downloaded [%s] [%s]", url, buf)
         return buf
