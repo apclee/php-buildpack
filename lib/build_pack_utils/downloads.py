@@ -30,7 +30,10 @@ class Downloader(object):
             urllib2.install_opener(opener)
 
     def download(self, url, toFile):
-        res = urllib2.urlopen(url)
+        print 'Donwloading package...'
+        headers = {'User-agent' : 'Mozilla/5.0'}
+        req = urllib2.Request(url, None, headers)
+        res = urllib2.urlopen(req)
         with open(toFile, 'w') as f:
             f.write(res.read())
         print 'Downloaded [%s] to [%s]' % (url, toFile)
