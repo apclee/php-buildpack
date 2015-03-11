@@ -14,6 +14,7 @@ class Downloader(object):
 
     def _init_proxy(self):
         handlers = {}
+        print 'Setting proxy'
         for key in self._ctx.keys():
             if key.lower().endswith('_proxy'):
                 handlers[key.split('_')[0]] = self._ctx[key]
