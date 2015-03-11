@@ -36,6 +36,5 @@
     "PHP_MODULES_STRIP": "true",
     "PHP_MODULES": [],
     "PHP_EXTENSIONS": [ "bz2", "zlib", "curl", "mcrypt"],
-    "ZEND_EXTENSIONS": [],
-    "HTTPS_PROXY": "http://rdc-ext-bcproxy7.allstate.com:8080"
+    "ZEND_EXTENSIONS": []
 }
